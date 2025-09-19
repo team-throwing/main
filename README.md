@@ -1,8 +1,4 @@
 @ -1,123 +0,0 @@
-# README
-
-<br>
-
 # 🎯 Github branch 관리 전략
 
 - 우리 팀은 github flow 를 사용합니다!
