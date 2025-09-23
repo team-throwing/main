@@ -1,0 +1,53 @@
+# 자바 1주차 개념 정리
+
+## 1. MVC 패턴과 사촌들 (MV* 패턴)
+
+**비유: 음식점**
+
+- **Model (주방)** : 실제로 요리를 만드는 곳. 레시피(비즈니스 로직)와 재료(데이터)를 관리.  
+- **View (홀/손님이 보는 접시 위 음식)** : 결과를 눈으로 볼 수 있게 예쁘게 담아내는 부분.  
+- **Controller (웨이터)** : 손님 주문을 받아서 주방에 전달하고, 나온 음식을 다시 손님에게 전달.  
+
+**사촌들**
+- **MVP (Model–View–Presenter)** → 웨이터가 손님 앞에서 설명까지 해주는 구조.  
+- **MVVM (Model–View–ViewModel)** → 자동 주문 패널(ViewModel)을 사용해서 주방과 자동 연결. (데이터 바인딩)  
+
+---
+
+## 2. VO, DTO
+
+**비유: 택배 상자**
+
+- **VO (Value Object)**  
+  - 값 자체를 담는 상자.  
+  - 값이 같으면 같은 객체 취급.  
+  - 불변 객체(immutable).  
+  - 예: 좌표(x=3, y=5), 돈(1000원).  
+
+```java
+// VO 예시: 값 그 자체를 표현
+public class MoneyVO {
+    private final int amount;
+
+    public MoneyVO(int amount) {
+        this.amount = amount;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    // 값이 같으면 같은 객체로 취급 (equals, hashCode 오버라이드)
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MoneyVO)) return false;
+        MoneyVO money = (MoneyVO) o;
+        return amount == money.amount;
+    }
+
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(amount);
+    }
+}
