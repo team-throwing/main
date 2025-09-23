@@ -1,4 +1,68 @@
 @ -1,123 +0,0 @@
+
+<details>
+    <summary><h1>🌱 PR 생성 표</h1></summary>
+
+<table>
+<tr>
+    <th scope="col">#</td>
+    <th scope="col">일자</td>
+    <th scope="col">🤵 지민수 PR</td>
+    <th scope="col">👷 한승엽 PR</td>
+    <th scope="col">🧙‍♂️ 정진용 PR</td>
+    <th scope="col">🕵️‍♂️ 고산성 PR</td>
+    <th scope="col">👨‍🔬 김예준 PR</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>25.09.17</td>
+    <td>✔️</td>
+    <td>✔️</td>
+    <td>✔️</td>
+    <td>✔️</td>
+    <td>✔️</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>25.09.18</td>
+    <td>✔️</td>
+    <td>✔️</td>
+    <td>✔️</td>
+    <td></td>
+    <td>✔️</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>25.09.19</td>
+    <td>✔️</td>
+    <td>✔️</td>
+    <td>✔️</td>
+    <td></td>
+    <td>✔️</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>25.09.22</td>
+    <td></td>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>25.09.23</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+</table>
+</details>
+
+<br>
+
 # 🎯 Github branch 관리 전략
 
 - 우리 팀은 github flow 를 사용합니다!
