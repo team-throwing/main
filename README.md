@@ -58,6 +58,15 @@
     <td>✔️</td>
     <td></td>
 </tr>
+<tr>
+    <td>6</td>
+    <td>25.09.24</td>
+    <td></td>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
 </table>
 </details>
 
