@@ -16,7 +16,7 @@ public class Sol {
     }
 }
 
-// 결제수단 추상클래스
+// 결제수단 추상클래스 (method만 있어서 Interface로 하는게 더 좋긴함)
 abstract class PaymentMethod {
     abstract void pay(int amount);
 }
@@ -47,15 +47,9 @@ class PaymentService {
 
     // 서비스 생성시, 결제 수단과 결제금액 받고 처리
     public void processPayment(PaymentMethod paymentMethod, int amount) {
-        if (paymentMethod instanceof CreditCard) {
-            ((CreditCard) paymentMethod).pay(amount);
-        } else if (paymentMethod instanceof KakaoPay) {
-            ((KakaoPay) paymentMethod).pay(amount);
-        } else if (paymentMethod instanceof NaverPay) {
-            ((NaverPay) paymentMethod).pay(amount);
-        } else {
-            System.out.println("못하겠는디 계산?");
-        }
+        // 굳이 명시적 형변환 필요없는데 사용했음.... 2분 같은의견
+        paymentMethod.pay(amount)
+        
         // 17 에서는 preview라 안되고, 21부터 가능
 //        switch (paymentMethod.getClass().getSimpleName()) {
 //            case "CreditCard" -> ((CreditCard) paymentMethod).pay(amount);

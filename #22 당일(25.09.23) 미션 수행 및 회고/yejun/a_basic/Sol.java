@@ -28,12 +28,13 @@ class BankAccount {
         this.balance += amount;
     }
     public long withdraw(long amount) {
-        if (this.balance >= amount) { // 분?기?예?측?
-            this.balance -= amount;
-            System.out.print("출금액 : "+ amount);
-        } else {
+        // 굳이 else if 를 사용하기 보다는 제거 -> 가독성 ^
+        if (this.balance < amount) {
             System.out.println("잔액이 부족합니다. 출금실패");
-        }
+            return amount
+        } 
+        this.balance -= amount;
+        System.out.print("출금액 : "+ amount);
         return amount;
         
     }
