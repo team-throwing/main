@@ -18,46 +18,46 @@ VALUES (값1, 값2, ...);
 예시:
 
 sql
-코드 복사
+
 INSERT INTO USERS (user_id, email, name)
 VALUES (1, 'minsu@example.com', '민수');
 2-2. SELECT FROM – 데이터 조회
 sql
-코드 복사
+
 SELECT 컬럼1, 컬럼2, ...
 FROM 테이블명
 WHERE 조건;
 예시:
 
 sql
-코드 복사
+
 SELECT name, email
 FROM USERS
 WHERE user_id = 1;
 2-3. UPDATE SET – 데이터 수정
 sql
-코드 복사
 UPDATE 테이블명
 SET 컬럼1 = 값1, 컬럼2 = 값2, ...
 WHERE 조건;
 예시:
 
 sql
-코드 복사
+
 UPDATE USERS
 SET name = '민수정'
 WHERE user_id = 1;
 2-4. DELETE FROM – 데이터 삭제
 sql
-코드 복사
+
 DELETE FROM 테이블명
 WHERE 조건;
 예시:
 
 sql
-코드 복사
+
 DELETE FROM USERS
 WHERE user_id = 1;
+```
 3. 테이블 구조 정의와 제약 조건
 3-1. CREATE TABLE – 테이블 생성
 sql
