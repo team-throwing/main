@@ -61,24 +61,26 @@ WHERE user_id = 1;
 3. 테이블 구조 정의와 제약 조건
 3-1. CREATE TABLE – 테이블 생성
 sql
-코드 복사
+```
 CREATE TABLE 테이블명 (
     컬럼명 데이터타입 제약조건,
     ...
     PRIMARY KEY (컬럼명),
     FOREIGN KEY (컬럼명) REFERENCES 다른테이블(컬럼명)
-);
-3-2. 주요 제약 조건
-제약조건	설명
-NOT NULL	NULL 값 입력 불가
-UNIQUE	중복 값 불가
-PRIMARY KEY	유일한 식별자, 자동 NOT NULL + UNIQUE
-FOREIGN KEY	다른 테이블과 연결, 참조 무결성 유지
-CHECK	입력 값 조건 제한
-DEFAULT	값이 없을 때 기본값 지정
-AUTO_INCREMENT	숫자 컬럼 자동 증가
+
+| 제약조건           | 설명                            |
+| -------------- | ----------------------------- |
+| NOT NULL       | NULL 값 입력 불가                  |
+| UNIQUE         | 중복 값 불가                       |
+| PRIMARY KEY    | 유일한 식별자, 자동 NOT NULL + UNIQUE |
+| FOREIGN KEY    | 다른 테이블과 연결, 참조 무결성 유지         |
+| CHECK          | 입력 값 조건 제한                    |
+| DEFAULT        | 값이 없을 때 기본값 지정                |
+| AUTO_INCREMENT | 숫자 컬럼 자동 증가                   |
+
 
 4. 테이블 관계 설계
+
 테이블 간 관계는 ERD로 표현
 
 관계 유형:
@@ -92,6 +94,7 @@ N:M → 중간 테이블 생성으로 해결
 예시: USERS ↔ COURSES ↔ ENROLLMENTS
 
 5. MySQL 실습 흐름
+
 ERD 설계 → 테이블, 컬럼, 관계 정의
 
 CREATE TABLE로 테이블 생성
@@ -103,6 +106,7 @@ SELECT, UPDATE, DELETE로 데이터 조회/수정/삭제
 제약 조건과 관계를 통해 데이터 무결성 유지
 
 6. 핵심 포인트
+
 CRUD 문법 = MySQL 작업의 90% 이상
 
 하지만 중요한 건:
