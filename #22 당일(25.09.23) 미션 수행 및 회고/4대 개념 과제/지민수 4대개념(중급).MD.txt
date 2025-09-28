@@ -1,0 +1,64 @@
+// 부모 클래스
+class Character {
+    protected String name;
+    protected int hp;
+
+    public Character(String name, int hp) {
+        this.name = name;
+        this.hp = hp;
+    }
+
+    // 공통 공격 메서드
+    public void attack() {  // 각각 적용할거면 굳이 없어도됨
+        System.out.println("기본 공격!");
+    }
+}
+
+// 전사 클래스 (Warrior)
+class Warrior extends Character {
+    public Warrior(String name, int hp) {
+        super(name, hp); // 부모 생성자 호출
+    }
+
+    @Override
+    public void attack() {
+        System.out.println("강력한 칼로 공격!");
+    }
+}
+
+// 마법사 클래스 (Wizard)
+class Wizard extends Character {
+    public Wizard(String name, int hp) {
+        super(name, hp);
+    }
+
+    @Override
+    public void attack() {
+        System.out.println("화려한 마법으로 공격!");
+    }
+
+    // 마법사만의 고유 메서드
+    public void castSpell() {
+        System.out.println("마법을 시전합니다");
+    }
+}
+
+// 실행 클래스
+public class Main {
+    public static void main(String[] args) {
+        // 캐릭터 생성
+        Character baseChar = new Character("모험가", 100);
+        Warrior warrior = new Warrior("강철 전사", 150);
+        Wizard wizard = new Wizard("현자의 마법사", 80);
+
+        // 공격 메서드 호출 (오버라이딩 확인)
+        baseChar.attack();   // 기본 공격!
+        warrior.attack();    // 강력한 칼로 공격!
+        wizard.attack();     // 화려한 마법으로 공격!
+
+        // Wizard만의 고유 기능
+        wizard.castSpell();  // 마법을 시전합니다
+}
+
+
+어택이란 메서드는 추상메서드라 하위에서 오버라이드해서 각각 다른 출력물 가능
